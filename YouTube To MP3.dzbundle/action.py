@@ -66,7 +66,6 @@ def download_url(url):
     from yt_dlp import YoutubeDL
 
     # Set download path to Dropzone temp folder
-    print(dz.temp_folder())
     download_path = os.environ['path']
 
     ydl_opts = {
