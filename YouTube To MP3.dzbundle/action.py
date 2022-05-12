@@ -4,8 +4,9 @@
 # Handles: Text
 # Creator: Aptonic Software
 # URL: https://aptonic.com
+# OptionsNIB: ChooseFolder
 # Events: Clicked, Dragged
-# SkipConfig: Yes
+# SkipConfig: No
 # RunsSandboxed: No
 # Version: 2.7
 # MinDropzoneVersion: 3.5
@@ -65,7 +66,8 @@ def download_url(url):
     from yt_dlp import YoutubeDL
 
     # Set download path to Dropzone temp folder
-    download_path = dz.temp_folder()
+    print(dz.temp_folder())
+    download_path = os.environ['path']
 
     ydl_opts = {
         'format': 'bestaudio/best',
